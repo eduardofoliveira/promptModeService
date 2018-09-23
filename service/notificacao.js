@@ -5,18 +5,18 @@ const transportCloud = nodemailer.createTransport({
   secure: true,
   port: 465,
   auth: {
-    user: 'suporte1@cloudcom.com.br',
-    pass: 'Cloud777'
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS
   }
 })
 
 let enviarEmail = (to, dominio, did, destino, error_ws) => {
 
   let HelperOptions = {
-    from: '"Suporte Basix" <suporte@cloudcom.com.br>',
+    from: process.env.GMAIL_FROM,
     to: to,
-    cc: 'suporte.basix@cloudcom.com.br',
-    replyTo: { "name": 'Suporte Basix', "address": 'suporte@cloudcom.com.br' },
+    cc: process.env.GMAIL_CC,
+    replyTo: { "name": process.env.GMAIL_REPLY_TO_NAME, "address": process.env.GMAIL_REPLY_TO_EMAIL },
     subject: `PromptMode - Aviso de Falha - ${dominio} ${did} ${destino}`,
     html: `Falha ao alterar o DID: ${did} para o destino: ${destino} no dominio: ${dominio}<br>${error_ws}`
   }
