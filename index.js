@@ -1,6 +1,6 @@
+require('dotenv').load()
 const axios = require('axios')
 const CronJob = require('cron').CronJob
-require('dotenv').load()
 const conn = require('./service/mariadb')
 const notificacao = require('./service/notificacao')
 
