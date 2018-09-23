@@ -1,0 +1,22 @@
+{
+  "name": "promptModeService",
+  "version": "1.0.0",
+  "description": "Service PromptMode",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Cloudcom",
+    "PromptMode"
+  ],
+  "author": "Eduardo F. Oliveira<eduardo@cloudcom.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cron": "^1.4.1",
+    "dotenv": "^6.0.0",
+    "mariadb": "^2.0.0-alpha",
+    "nodemailer": "^4.6.8"
+  }
+}
