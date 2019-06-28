@@ -36,7 +36,7 @@ let job = new CronJob(
                 `Erro WebService: ${item.dominio} ${item.destino} ${response.data}`
               ]);
               let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-              await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, response.data);
+              await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, response.data);
             } else {
               await conn.query("INSERT INTO log (informacao) values (?)", [`Alteração efetuada: ${response.data}`]);
             }
@@ -48,7 +48,7 @@ let job = new CronJob(
                 `Erro WebService: ${item.did} ${item.dominio} ${item.destino} ${response.data}`
               ]);
               let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-              await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, response.data);
+              await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, response.data);
             } else {
               await conn.query("INSERT INTO log (informacao) values (?)", [`Alteração efetuada: ${response.data}`]);
             }
@@ -58,7 +58,7 @@ let job = new CronJob(
             `Codido de Erro: ${error.code} ao efetuar a requisição: ${error.config.url}`
           ]);
           let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-          await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, error.code);
+          await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, error.code);
         }
       }
     }
@@ -86,7 +86,7 @@ let job = new CronJob(
                 `Erro WebService: ${item.dominio} ${item.destino} ${response.data}`
               ]);
               let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-              await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, response.data);
+              await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, response.data);
             } else {
               await conn.query("INSERT INTO log (informacao) values (?)", [
                 `Alteração efetuada - INICIO FERIADO: ${response.data}`
@@ -100,7 +100,7 @@ let job = new CronJob(
                 `Erro WebService: ${item.did} ${item.dominio} ${item.destino} ${response.data}`
               ]);
               let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-              await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, response.data);
+              await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, response.data);
             } else {
               await conn.query("INSERT INTO log (informacao) values (?)", [
                 `Alteração efetuada - INICIO FERIADO: ${response.data}`
@@ -112,7 +112,7 @@ let job = new CronJob(
             `Codido de Erro: ${error.code} ao efetuar a requisição: ${error.config.url}`
           ]);
           let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-          await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, error.code);
+          await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, error.code);
         }
       }
     }
@@ -138,7 +138,7 @@ let job = new CronJob(
                 `Erro WebService: ${item.dominio} ${item.destino} ${response.data}`
               ]);
               let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-              await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, response.data);
+              await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, response.data);
             } else {
               await conn.query("INSERT INTO log (informacao) values (?)", [
                 `Alteração efetuada - FIM FERIADO: ${response.data}`
@@ -152,7 +152,7 @@ let job = new CronJob(
                 `Erro WebService: ${item.did} ${item.dominio} ${item.destino} ${response.data}`
               ]);
               let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-              await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, response.data);
+              await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, response.data);
             } else {
               await conn.query("INSERT INTO log (informacao) values (?)", [
                 `Alteração efetuada - FIM FERIADO: ${response.data}`
@@ -164,7 +164,7 @@ let job = new CronJob(
             `Codido de Erro: ${error.code} ao efetuar a requisição: ${error.config.url}`
           ]);
           let result = await conn.query('SELECT valor FROM config where chave = "email_notificacao"');
-          await notificacao.enviarEmail(result[0].valor, item.dominio, "tronco", item.destino, error.code);
+          await notificacao.enviarEmail(result[0].valor, item.dominio, item.did, item.destino, error.code);
         }
       }
     }
