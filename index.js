@@ -83,9 +83,9 @@ const executar = async () => {
   }
 }
 
-// let job = new CronJob("0 * * * * *", async () => {
-//   executar()
-// }, null, true, "America/Sao_Paulo");
+let job = new CronJob("0 * * * * *", async () => {
+  executar()
+}, null, true, "America/Sao_Paulo");
 
 // let job = new CronJob(
 //   "0 * * * * *",
