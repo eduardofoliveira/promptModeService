@@ -31,9 +31,9 @@ const executar = async () => {
           }
         })
   
-        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.domain} com retorno: ${data.message}`)
+        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.dominio} com retorno: ${data.message}`)
       } catch (error) {
-        await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
+        await notificacao.enviarEmail(toEmail, item.dominio, item.did, item.destino, response.data)
       }
     }
   }
@@ -53,9 +53,9 @@ const executar = async () => {
           }
         })
   
-        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.domain} com retorno: ${data.message}`)
+        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.dominio} com retorno: ${data.message}`)
       } catch (error) {
-        await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
+        await notificacao.enviarEmail(toEmail, item.dominio, item.did, item.destino, response.data)
       }
     }
   }
@@ -75,9 +75,9 @@ const executar = async () => {
           }
         })
   
-        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.domain} com retorno: ${data.message}`)
+        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.dominio} com retorno: ${data.message}`)
       } catch (error) {
-        await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
+        await notificacao.enviarEmail(toEmail, item.dominio, item.did, item.destino, response.data)
       }
     }
   }
