@@ -31,7 +31,7 @@ const executar = async () => {
           }
         })
   
-        await log.addLog(`${did} alterado para ${user} no dominio ${domain} com retorno: ${data.message}`)
+        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.domain} com retorno: ${data.message}`)
       } catch (error) {
         await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
       }
@@ -53,7 +53,7 @@ const executar = async () => {
           }
         })
   
-        await log.addLog(`${did} alterado para ${user} no dominio ${domain} com retorno: ${data.message}`)
+        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.domain} com retorno: ${data.message}`)
       } catch (error) {
         await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
       }
@@ -75,7 +75,7 @@ const executar = async () => {
           }
         })
   
-        await log.addLog(`${did} alterado para ${user} no dominio ${domain} com retorno: ${data.message}`)
+        await log.addLog(`${item.did} alterado para ${item.destino} no dominio ${item.domain} com retorno: ${data.message}`)
       } catch (error) {
         await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
       }
@@ -83,9 +83,9 @@ const executar = async () => {
   }
 }
 
-let job = new CronJob("0 * * * * *", async () => {
-  executar()
-}, null, true, "America/Sao_Paulo");
+// let job = new CronJob("0 * * * * *", async () => {
+//   executar()
+// }, null, true, "America/Sao_Paulo");
 
 // let job = new CronJob(
 //   "0 * * * * *",
