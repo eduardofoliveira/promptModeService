@@ -33,7 +33,7 @@ const executar = async () => {
   
         await log.addLog(`${did} alterado para ${user} no dominio ${domain} com retorno: ${data.message}`)
       } catch (error) {
-        await notificacao.enviarEmail(toEmail, domain, did, user, response.data)
+        await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
       }
     }
   }
@@ -55,7 +55,7 @@ const executar = async () => {
   
         await log.addLog(`${did} alterado para ${user} no dominio ${domain} com retorno: ${data.message}`)
       } catch (error) {
-        await notificacao.enviarEmail(toEmail, domain, did, user, response.data)
+        await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
       }
     }
   }
@@ -77,7 +77,7 @@ const executar = async () => {
   
         await log.addLog(`${did} alterado para ${user} no dominio ${domain} com retorno: ${data.message}`)
       } catch (error) {
-        await notificacao.enviarEmail(toEmail, domain, did, user, response.data)
+        await notificacao.enviarEmail(toEmail, item.domain, item.did, item.destino, response.data)
       }
     }
   }
