@@ -90,10 +90,13 @@ let job = new CronJob("0 * * * * *", async () => {
 // let job = new CronJob(
 //   "0 * * * * *",
 //   async () => {
-//     agora = new Date();
+//     // agora = new Date();
+//     agora = new Date(2020, 07, 17, 17, 0, 0);
 //     let diaSemana = agora.getDay();
 //     let hora = agora.getHours();
 //     let minuto = agora.getMinutes();
+
+//     console.log(diaSemana, hora, minuto)
 
 //     let rows = await programacoes.getProgramacoes({ diaSemana, hora, minuto })
 
