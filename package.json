@@ -13,7 +13,7 @@
   "author": "Eduardo F. Oliveira<eduardo@cloudcom.com.br>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "cron": "^1.7.1",
     "date-fns": "^2.19.0",
     "dotenv": "^6.2.0",
