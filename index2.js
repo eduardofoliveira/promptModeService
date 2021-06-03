@@ -15,7 +15,7 @@ const executar = async () => {
     let hora = agora.getHours()
     let minuto = agora.getMinutes()
 
-    // console.log({ diaSemana, hora, minuto })
+    console.log({ diaSemana, hora, minuto })
     // console.log(agora.toLocaleString())
 
     let url = await config.getUrl()
