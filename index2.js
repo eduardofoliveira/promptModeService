@@ -43,13 +43,13 @@ const executar = async () => {
                 let { data } = await api.get(`/setdefaultoperator/${programacao.destino}&${programacao.dominio}`)
 
                 await log.addLog(
-                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data.message}`
+                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data}`
                 )
             } else {
                 let { data } = await api.get(`/set/${programacao.destino}&${programacao.dominio}&${programacao.did}`)
 
                 await log.addLog(
-                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data.message}`
+                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data}`
                 )
             }
         } catch (error) {
@@ -71,13 +71,13 @@ const executar = async () => {
                 let { data } = await api.get(`/setdefaultoperator/${programacao.destino}&${programacao.dominio}`)
 
                 await log.addLog(
-                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data.message}`
+                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data}`
                 )
             } else {
                 let { data } = await api.get(`/set/${programacao.destino}&${programacao.dominio}&${programacao.did}`)
 
                 await log.addLog(
-                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data.message}`
+                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data}`
                 )
             }
         } catch (error) {
@@ -99,13 +99,13 @@ const executar = async () => {
                 let { data } = await api.get(`/setdefaultoperator/${programacao.destino}&${programacao.dominio}`)
 
                 await log.addLog(
-                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data.message}`
+                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data}`
                 )
             } else {
                 let { data } = await api.get(`/set/${programacao.destino}&${programacao.dominio}&${programacao.did}`)
 
                 await log.addLog(
-                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data.message}`
+                    `${programacao.did} alterado para ${programacao.destino} no dominio ${programacao.dominio} com retorno: ${data}`
                 )
             }
         } catch (error) {
